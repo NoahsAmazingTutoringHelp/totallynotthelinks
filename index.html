@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah's Tutoring Hub - Links</title>
     <link rel="icon" type="image/x-icon" href="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -76,19 +77,38 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            font-size: 1.8rem;
             color: white;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover::before {
+            transform: translateY(0);
         }
 
         .social-btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
 
         .discord-btn {
@@ -287,9 +307,9 @@
             }
             
             .social-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -299,7 +319,7 @@
     
     <div class="container">
         <header>
-            <img src="logo.png" alt="Noah's Tutoring Hub" class="logo">
+            <img src="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/logo.png" alt="Noah's Tutoring Hub" class="logo">
             <p class="subtitle">Access All Our Tutoring Resources</p>
             
             <div class="social-links">
@@ -401,9 +421,6 @@
     <div class="notification" id="notification">
         <p>Opening site in a new tab...</p>
     </div>
-
-    <!-- Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script>
         // DOM elements
