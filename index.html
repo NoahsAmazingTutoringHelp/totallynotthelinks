@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah's Tutoring Hub - Links</title>
+    <link rel="icon" type="image/x-icon" href="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/favicon.ico">
     <style>
         * {
             margin: 0;
@@ -59,16 +60,94 @@
         .subtitle {
             font-size: 1.5rem;
             color: #ddd;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             text-shadow: 0 0 8px rgba(245, 126, 34, 0.5);
         }
 
-        .links-container {
+        .social-links {
             display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .discord-btn {
+            background: #5865F2;
+        }
+
+        .discord-btn:hover {
+            background: #4752c4;
+        }
+
+        .github-btn {
+            background: #333;
+        }
+
+        .github-btn:hover {
+            background: #24292e;
+        }
+
+        .tiktok-btn {
+            background: #000;
+        }
+
+        .tiktok-btn:hover {
+            background: #333;
+        }
+
+        .links-section {
             width: 100%;
-            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #f57e22;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-shadow: 0 0 8px rgba(245, 126, 34, 0.5);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #f57e22, #ff9d4d);
+            border-radius: 2px;
+        }
+
+        .links-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+            max-width: 1200px;
             margin-top: 2rem;
         }
 
@@ -179,6 +258,15 @@
             .subtitle {
                 font-size: 1.2rem;
             }
+            
+            .links-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .social-links {
+                gap: 1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -193,6 +281,16 @@
             .subtitle {
                 font-size: 1rem;
             }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .social-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
@@ -203,43 +301,95 @@
         <header>
             <img src="logo.png" alt="Noah's Tutoring Hub" class="logo">
             <p class="subtitle">Access All Our Tutoring Resources</p>
+            
+            <div class="social-links">
+                <a href="https://discord.gg/pCGQ8vrKza" target="_blank" class="social-btn discord-btn" title="Join our Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="https://github.com/NoahsAmazingTutoringHelp" target="_blank" class="social-btn github-btn" title="Visit our GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.tiktok.com/@noahstutoringhub" target="_blank" class="social-btn tiktok-btn" title="Follow us on TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
         </header>
         
         <div class="links-container">
-            <div class="link-card">
-                <h3 class="link-title">Main Hub</h3>
-                <p class="link-url">sites.google.com/view/noahs-tutoring-hub</p>
-                <a href="https://sites.google.com/view/noahs-tutoring-hub" target="_blank" class="visit-btn">Visit Site</a>
+            <!-- Old Site Links Section -->
+            <div class="links-section">
+                <h2 class="section-title">Old Site Links</h2>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Main Hub</h3>
+                    <p class="link-url">sites.google.com/view/noahs-tutoring-hub</p>
+                    <a href="https://sites.google.com/view/noahs-tutoring-hub" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Alebramath Problems</h3>
+                    <p class="link-url">www.alebramathproblems.publicvm.com</p>
+                    <a href="http://www.alebramathproblems.publicvm.com" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Noah's Tutoring</h3>
+                    <p class="link-url">www.noahstutoring.work.gd</p>
+                    <a href="http://www.noahstutoring.work.gd" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Online Math Tutor</h3>
+                    <p class="link-url">www.onlinemathtutor.zone.id</p>
+                    <a href="http://www.onlinemathtutor.zone.id" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Mr. Moore Math</h3>
+                    <p class="link-url">http://www.mrmooremath.zone.id/</p>
+                    <a href="http://www.mrmooremath.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">School Newspaper Archive</h3>
+                    <p class="link-url">www.school-newspaper-archive.linkpc.net</p>
+                    <a href="http://www.school-newspaper-archive.linkpc.net" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
             </div>
             
-            <div class="link-card">
-                <h3 class="link-title">Alebramath Problems</h3>
-                <p class="link-url">www.alebramathproblems.publicvm.com</p>
-                <a href="http://www.alebramathproblems.publicvm.com" target="_blank" class="visit-btn">Visit Site</a>
-            </div>
-            
-            <div class="link-card">
-                <h3 class="link-title">Noah's Tutoring</h3>
-                <p class="link-url">www.noahstutoring.work.gd</p>
-                <a href="http://www.noahstutoring.work.gd" target="_blank" class="visit-btn">Visit Site</a>
-            </div>
-            
-            <div class="link-card">
-                <h3 class="link-title">Online Math Tutor</h3>
-                <p class="link-url">www.onlinemathtutor.zone.id</p>
-                <a href="http://www.onlinemathtutor.zone.id" target="_blank" class="visit-btn">Visit Site</a>
-            </div>
-            
-            <div class="link-card">
-                <h3 class="link-title">Mr. Moore Math</h3>
-                <p class="link-url">http://www.mrmooremath.zone.id/</p>
-                <a href="http://www.mrmooremath.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
-            </div>
-            
-            <div class="link-card">
-                <h3 class="link-title">School Newspaper Archive</h3>
-                <p class="link-url">www.school-newspaper-archive.linkpc.net</p>
-                <a href="http://www.school-newspaper-archive.linkpc.net" target="_blank" class="visit-btn">Visit Site</a>
+            <!-- New HTML Site Links Section -->
+            <div class="links-section">
+                <h2 class="section-title">New HTML Site Links</h2>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Main Link</h3>
+                    <p class="link-url">noahsamazingtutoringhelp.github.io/Noahs-Calculus-Tutor/</p>
+                    <a href="https://noahsamazingtutoringhelp.github.io/Noahs-Calculus-Tutor/" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Mr. Brown's US History</h3>
+                    <p class="link-url">mrbrowns-us-history.zone.id</p>
+                    <a href="https://mrbrowns-us-history.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Organic Chemistry Help</h3>
+                    <p class="link-url">organic-chem-help.run.place</p>
+                    <a href="http://organic-chem-help.run.place" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Writing Workshop</h3>
+                    <p class="link-url">writing-workshop.zone.id</p>
+                    <a href="https://writing-workshop.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
+                
+                <div class="link-card">
+                    <h3 class="link-title">Schoology Assistance</h3>
+                    <p class="link-url">schoology-assistance.linkpc.net</p>
+                    <a href="http://schoology-assistance.linkpc.net/" target="_blank" class="visit-btn">Visit Site</a>
+                </div>
             </div>
         </div>
         
@@ -251,6 +401,9 @@
     <div class="notification" id="notification">
         <p>Opening site in a new tab...</p>
     </div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script>
         // DOM elements
@@ -269,6 +422,15 @@
                 btn.addEventListener('click', function(e) {
                     const siteName = this.closest('.link-card').querySelector('.link-title').textContent;
                     showNotification(`Opening ${siteName}...`);
+                });
+            });
+            
+            // Add click event to social buttons
+            document.querySelectorAll('.social-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const platform = this.classList.contains('discord-btn') ? 'Discord' : 
+                                   this.classList.contains('github-btn') ? 'GitHub' : 'TikTok';
+                    showNotification(`Opening ${platform}...`);
                 });
             });
         }
@@ -382,4 +544,3 @@
     </script>
 </body>
 </html>
-
