@@ -1,187 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah's Tutoring Hub - Links</title>
-    <link rel="icon" type="image/x-icon" href="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/favicon.ico">
+    <title>NOAH'S TUTORING HUB | RESOURCES</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #c27c15;
+            --primary-rgb: 194, 124, 21;
+            --primary-dim: rgba(194, 124, 21, 0.08);
+            --bg-black: #000000;
+            --bg-black-light: #050505;
+            --bg-black-lighter: #0a0a0a;
+            --bg-card: rgba(10, 10, 10, 0.6);
+            --bg-card-hover: rgba(15, 15, 15, 0.7);
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #888888;
+            --border-color: rgba(194, 124, 21, 0.15);
+            --border-hover: rgba(194, 124, 21, 0.4);
+            --card-border: rgba(255, 255, 255, 0.05);
+            --card-border-hover: rgba(194, 124, 21, 0.3);
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+            --shadow-glow: 0 8px 30px rgba(194, 124, 21, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --status-online: #22c55e;
+            --status-offline: #ef4444;
+            --blur-amount: blur(10px);
         }
 
         body {
-            background-color: #111;
-            color: #fff;
-            overflow-x: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
             min-height: 100vh;
             position: relative;
-        }
-
-        #background-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            overflow-x: hidden;
+            background: var(--bg-black);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 2rem;
-            z-index: 1;
+            padding: 3rem 2rem;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            z-index: 10;
         }
 
-        header {
+        .header {
             text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem 0;
-            width: 100%;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .logo-wrapper {
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
         }
 
         .logo {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 10px rgba(245, 126, 34, 0.7));
+            height: 120px;
+            width: auto;
+            filter: drop-shadow(0 0 20px rgba(194, 124, 21, 0.2));
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            filter: drop-shadow(0 0 30px rgba(194, 124, 21, 0.3));
+            transform: scale(1.02);
         }
 
         .subtitle {
-            font-size: 1.5rem;
-            color: #ddd;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 8px rgba(245, 126, 34, 0.5);
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-top: 1rem;
+            font-weight: 300;
         }
 
-        .social-links {
+        .subtitle i {
+            color: var(--primary);
+            margin: 0 8px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .social-bar {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
+            margin: 3rem 0 2rem;
         }
 
-        .social-btn {
+        .social-link {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            font-size: 1.8rem;
-            color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
+            transition: var(--transition);
+            font-size: 1.2rem;
         }
 
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+        .social-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+            background: rgba(20, 20, 20, 0.7);
         }
 
-        .social-btn:hover::before {
-            transform: translateY(0);
-        }
-
-        .social-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-        }
-
-        .discord-btn {
-            background: #5865F2;
-        }
-
-        .discord-btn:hover {
-            background: #4752c4;
-        }
-
-        .github-btn {
-            background: #333;
-        }
-
-        .github-btn:hover {
-            background: #24292e;
-        }
-
-        .tiktok-btn {
-            background: #000;
-        }
-
-        .tiktok-btn:hover {
-            background: #333;
-        }
-
-        .links-section {
-            width: 100%;
+        .section-header {
             margin-bottom: 3rem;
+            position: relative;
         }
 
         .section-title {
-            font-size: 2rem;
-            color: #f57e22;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            text-shadow: 0 0 8px rgba(245, 126, 34, 0.5);
-            position: relative;
-            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+        .section-title span {
+            color: var(--primary);
+            font-weight: 400;
+        }
+
+        .section-line {
             width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, #f57e22, #ff9d4d);
-            border-radius: 2px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+            margin-top: 0.5rem;
         }
 
-        .links-container {
+        .links-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            width: 100%;
-            max-width: 1200px;
-            margin-top: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .links-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .link-card {
-            background: rgba(30, 30, 30, 0.8);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(245, 126, 34, 0.3);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
+            background: var(--bg-card);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            transition: var(--transition);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-shadow: var(--shadow);
         }
 
         .link-card::before {
@@ -189,375 +189,660 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #f57e22, #ff9d4d);
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+            opacity: 0.5;
         }
 
         .link-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(245, 126, 34, 0.4);
-            border-color: rgba(245, 126, 34, 0.7);
+            border-color: var(--card-border-hover);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
         }
 
-        .link-title {
-            font-size: 1.4rem;
-            color: #f57e22;
+        .link-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 1rem;
-            text-shadow: 0 0 8px rgba(245, 126, 34, 0.5);
         }
 
-        .link-url {
-            color: #bbb;
-            margin-bottom: 1.5rem;
-            word-break: break-all;
-            font-family: monospace;
-            font-size: 1.1rem;
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        .visit-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #f57e22, #ff9d4d);
-            color: #111;
-            padding: 0.8rem 1.5rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(245, 126, 34, 0.3);
-            width: 150px;
-            align-self: flex-end;
+            position: relative;
         }
 
-        .visit-btn:hover {
-            background: linear-gradient(135deg, #ff9d4d, #f57e22);
-            box-shadow: 0 6px 15px rgba(245, 126, 34, 0.5);
-            transform: scale(1.05);
+        .status-dot.online {
+            background: var(--status-online);
+            box-shadow: 0 0 10px var(--status-online);
         }
 
-        footer {
-            text-align: center;
+        .status-dot.offline {
+            background: var(--status-offline);
+            box-shadow: 0 0 10px var(--status-offline);
+        }
+
+        .status-text {
+            color: var(--text-muted);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            padding-right: 1rem;
+        }
+
+        .card-url {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed var(--border-color);
+            word-break: break-all;
+            line-height: 1.4;
+        }
+
+        .card-footer {
             margin-top: auto;
-            padding: 2rem 0;
-            color: #777;
-            border-top: 1px solid rgba(245, 126, 34, 0.2);
-            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-category {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            padding: 0.3rem 0.8rem;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .visit-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            border: 1px solid var(--card-border);
+            border-radius: 30px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .visit-link i {
+            font-size: 0.8rem;
+            transition: transform 0.2s ease;
+            color: var(--primary);
+            opacity: 0.7;
+        }
+
+        .visit-link:hover:not(.disabled) {
+            border-color: var(--primary);
+            background: rgba(194, 124, 21, 0.1);
+            color: var(--primary);
+        }
+
+        .visit-link:hover:not(.disabled) i {
+            transform: translateX(3px);
+            opacity: 1;
+        }
+
+        .visit-link.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+            border-color: var(--card-border);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .footer i {
+            color: var(--primary);
+            margin: 0 4px;
+            opacity: 0.7;
         }
 
         .notification {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(30, 30, 30, 0.9);
-            border-left: 4px solid #f57e22;
-            padding: 1rem;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: var(--blur-amount);
+            -webkit-backdrop-filter: var(--blur-amount);
+            border-left: 3px solid var(--primary);
+            padding: 1rem 1.5rem;
             border-radius: 6px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow);
             transform: translateX(150%);
             transition: transform 0.4s ease;
             z-index: 1000;
-            max-width: 300px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .notification.show {
             transform: translateX(0);
         }
 
+        .notification p {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .notification p i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+        .link-card {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
-                padding: 1rem;
+                padding: 2rem 1rem;
             }
-            
+
             .logo {
-                max-width: 300px;
+                height: 80px;
             }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .links-container {
+
+            .links-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
-            
-            .social-links {
+
+            .social-bar {
                 gap: 1rem;
+            }
+
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+                letter-spacing: 3px;
             }
         }
 
         @media (max-width: 480px) {
-            .link-card {
-                padding: 1.5rem;
-            }
-            
-            .logo {
-                max-width: 250px;
-            }
-            
             .subtitle {
-                font-size: 1rem;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
             }
-            
-            .section-title {
-                font-size: 1.5rem;
+
+            .card-title {
+                font-size: 1.1rem;
             }
-            
-            .social-btn {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
+
+            .card-url {
+                font-size: 0.7rem;
             }
         }
     </style>
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <canvas id="background-canvas"></canvas>
-    
+    <!-- Starfield Background Container -->
+    <div id="starfield-background"></div>
+
     <div class="container">
-        <header>
-            <img src="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/logo.png" alt="Noah's Tutoring Hub" class="logo">
-            <p class="subtitle">Access All Our Tutoring Resources</p>
-            
-            <div class="social-links">
-                <a href="https://discord.gg/pCGQ8vrKza" target="_blank" class="social-btn discord-btn" title="Join our Discord">
+        <header class="header">
+            <div class="logo-wrapper">
+                <img src="https://noahsamazingtutoringhelp.github.io/totallynotthelinks/logo.png"
+                    alt="Noah's Tutoring Hub" class="logo">
+            </div>
+            <div class="subtitle">
+                <i class="fas fa-minus"></i> ACCESS RESOURCES <i class="fas fa-minus"></i>
+            </div>
+
+            <div class="social-bar">
+                <a href="https://discord.gg/pCGQ8vrKza" target="_blank" class="social-link" title="Discord">
                     <i class="fab fa-discord"></i>
                 </a>
-                <a href="https://github.com/NoahsAmazingTutoringHelp" target="_blank" class="social-btn github-btn" title="Visit our GitHub">
+                <a href="https://github.com/NoahsAmazingTutoringHelp" target="_blank" class="social-link"
+                    title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.tiktok.com/@noahstutoringhub" target="_blank" class="social-btn tiktok-btn" title="Follow us on TikTok">
+                <a href="https://www.tiktok.com/@noahstutoringhub" target="_blank" class="social-link" title="TikTok">
                     <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.youtube.com/@noahstutoringhub" target="_blank" class="social-link" title="YouTube">
+                    <i class="fab fa-youtube"></i>
                 </a>
             </div>
         </header>
-        
-        <div class="links-container">
-            <!-- Old Site Links Section -->
-            <div class="links-section">
-                <h2 class="section-title">Old Site Links</h2>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Main Hub</h3>
-                    <p class="link-url">sites.google.com/view/noahs-tutoring-hub</p>
-                    <a href="https://sites.google.com/view/noahs-tutoring-hub" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Alebramath Problems</h3>
-                    <p class="link-url">www.alebramathproblems.publicvm.com</p>
-                    <a href="http://www.alebramathproblems.publicvm.com" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Noah's Tutoring</h3>
-                    <p class="link-url">www.noahstutoring.work.gd</p>
-                    <a href="http://www.noahstutoring.work.gd" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Online Math Tutor</h3>
-                    <p class="link-url">www.onlinemathtutor.zone.id</p>
-                    <a href="http://www.onlinemathtutor.zone.id" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Mr. Moore Math</h3>
-                    <p class="link-url">http://www.mrmooremath.zone.id/</p>
-                    <a href="http://www.mrmooremath.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">School Newspaper Archive</h3>
-                    <p class="link-url">www.school-newspaper-archive.linkpc.net</p>
-                    <a href="http://www.school-newspaper-archive.linkpc.net" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-            </div>
-            
-            <!-- New HTML Site Links Section -->
-            <div class="links-section">
-                <h2 class="section-title">New HTML Site Links</h2>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Main Link</h3>
-                    <p class="link-url">noahsamazingtutoringhelp.github.io/Noahs-Calculus-Tutor/</p>
-                    <a href="https://noahsamazingtutoringhelp.github.io/Noahs-Calculus-Tutor/" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Mr. Brown's US History</h3>
-                    <p class="link-url">mrbrowns-us-history.zone.id</p>
-                    <a href="https://mrbrowns-us-history.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Organic Chemistry Help</h3>
-                    <p class="link-url">organic-chem-help.run.place</p>
-                    <a href="http://organic-chem-help.run.place" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Writing Workshop</h3>
-                    <p class="link-url">writing-workshop.zone.id</p>
-                    <a href="https://writing-workshop.zone.id/" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-                
-                <div class="link-card">
-                    <h3 class="link-title">Schoology Assistance</h3>
-                    <p class="link-url">schoology-assistance.linkpc.net</p>
-                    <a href="http://schoology-assistance.linkpc.net/" target="_blank" class="visit-btn">Visit Site</a>
-                </div>
-            </div>
+
+        <!-- Main Links Section -->
+        <div class="section-header">
+            <h2 class="section-title"><span>MAIN</span> LINKS</h2>
+            <div class="section-line"></div>
         </div>
-        
-        <footer>
-            <p>Noah's Tutoring Hub &copy; 2023 | Your Gateway to Learning</p>
+
+        <div class="links-grid" id="main-links-grid"></div>
+
+        <!-- Other Links Section -->
+        <div class="section-header" style="margin-top: 2rem;">
+            <h2 class="section-title"><span>OTHER</span> RESOURCES</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="links-grid" id="other-links-grid"></div>
+
+        <footer class="footer">
+            <p>© 2026 NOAH'S TUTORING HUB <i class="fas fa-minus"></i> Made with blood and tears 🥺</i></p>
         </footer>
     </div>
-    
+
     <div class="notification" id="notification">
-        <p>Opening site in a new tab...</p>
+        <p><i class="fas fa-external-link-alt"></i> <span>Opening resource...</span></p>
     </div>
 
     <script>
-        // DOM elements
+        const links = [
+            {
+                title: "Noah's Calculus Tutor",
+                url: "https://noahsamazingtutoringhelp.github.io/Noahs-Calculus-Tutor/",
+                category: "MAIN",
+                active: true
+            },
+            {
+                title: "Calculus Tutor Pages",
+                url: "https://noahs-calculus-tutor.pages.dev/",
+                category: "MAIN",
+                active: true
+            },
+            {
+                title: "Algebra Calculus Tutor",
+                url: "https://unpkg.com/algebra-calculus-calculator@1.0.0/index.html",
+                category: "MAIN",
+                active: true
+            },
+            {
+                title: "Mr. Brown's US History",
+                url: "https://mrbrowns-us-history.zone.id/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Writing Workshop",
+                url: "https://writing-workshop.zone.id/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Organic Chemistry Help",
+                url: "http://organic-chem-help.run.place/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Nutrition Facts",
+                url: "https://nutritionfacts.fizicamedicala.ro/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Schoology Assistance",
+                url: "http://schoology-assistance.linkpc.net/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Biology Science",
+                url: "http://biologyscience.work.gd/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Psychology Brain",
+                url: "http://psychologybrain.linkpc.net/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Engineering Design",
+                url: "http://engineeringdesign.publicvm.com/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Google Script App",
+                url: "https://script.google.com/macros/s/AKfycbwxgWTLaEei-6GyHkbQ2yPhY-uHDmT2LKSSlDSg--sHhe0_C1hWZMAMhhZ0fBAomITS/exec",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Habitual Rabbits",
+                url: "http://habitual-rabbits.surge.sh/",
+                category: "OTHER",
+                active: false
+            },
+            {
+                title: "Noah's Academy",
+                url: "https://noahs.academy/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "ESM Algebra Calculator",
+                url: "https://esm.sh/algebra-calculus-calculator@1.0.0/index.html",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Low Taper Fade 67",
+                url: "https://lowtaperfade67.boxathome.net/",
+                category: "OTHER",
+                active: true
+            },
+            {
+                title: "Noah's Hub Web App",
+                url: "https://noahshub-95085080-7ac51.web.fireapp/",
+                category: "OTHER",
+                active: false
+            },
+            {
+                title: "Python Anywhere",
+                url: "https://thefunnys.pythonanywhere.com/noah",
+                category: "OTHER",
+                active: true
+            }
+        ];
+
         const notification = document.getElementById('notification');
+        const notificationText = notification.querySelector('span');
 
-        // Initialize the page
-        function init() {
-            setupEventListeners();
-            initBackgroundAnimation();
-        }
-
-        // Setup event listeners
-        function setupEventListeners() {
-            // Add click event to visit buttons
-            document.querySelectorAll('.visit-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    const siteName = this.closest('.link-card').querySelector('.link-title').textContent;
-                    showNotification(`Opening ${siteName}...`);
-                });
-            });
-            
-            // Add click event to social buttons
-            document.querySelectorAll('.social-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    const platform = this.classList.contains('discord-btn') ? 'Discord' : 
-                                   this.classList.contains('github-btn') ? 'GitHub' : 'TikTok';
-                    showNotification(`Opening ${platform}...`);
-                });
-            });
-        }
-
-        // Show notification
         function showNotification(message) {
-            notification.querySelector('p').textContent = message;
+            notificationText.textContent = message;
             notification.classList.add('show');
-            
+
             setTimeout(() => {
                 notification.classList.remove('show');
-            }, 3000);
+            }, 2000);
         }
 
-        // Background animation
-        function initBackgroundAnimation() {
-            const canvas = document.getElementById('background-canvas');
+        function createCard(link, index) {
+            const card = document.createElement('div');
+            card.className = 'link-card';
+            card.style.animationDelay = `${index * 0.1}s`;
+
+            const statusClass = link.active ? 'online' : 'offline';
+            const statusText = link.active ? 'ONLINE' : 'OFFLINE';
+            const linkClass = link.active ? '' : 'disabled';
+
+            card.innerHTML = `
+                <div class="card-header">
+                    <div class="status-indicator">
+                        <span class="status-dot ${statusClass}"></span>
+                        <span class="status-text">${statusText}</span>
+                    </div>
+                </div>
+                <h3 class="card-title">${link.title}</h3>
+                <p class="card-url">${link.url.replace(/^https?:\/\//, '')}</p>
+                <div class="card-footer">
+                    <span class="card-category">${link.category}</span>
+                    <a href="${link.url}" target="_blank" class="visit-link ${linkClass}" data-title="${link.title}">
+                        <span>Visit</span> <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            `;
+
+            const visitLink = card.querySelector('.visit-link');
+            if (link.active) {
+                visitLink.addEventListener('click', function (e) {
+                    showNotification(`Opening ${link.title}...`);
+                });
+            }
+
+            return card;
+        }
+
+        function renderLinks() {
+            const mainGrid = document.getElementById('main-links-grid');
+            const otherGrid = document.getElementById('other-links-grid');
+
+            mainGrid.innerHTML = '';
+            otherGrid.innerHTML = '';
+
+            const mainLinks = links.filter(link => link.category === 'MAIN');
+            const otherLinks = links.filter(link => link.category === 'OTHER');
+
+            mainLinks.forEach((link, index) => {
+                mainGrid.appendChild(createCard(link, index));
+            });
+
+            otherLinks.forEach((link, index) => {
+                otherGrid.appendChild(createCard(link, index + mainLinks.length));
+            });
+        }
+
+        renderLinks();
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                const platform = this.title;
+                showNotification(`Connecting to ${platform}...`);
+            });
+        });
+
+        (function () {
+            const container = document.getElementById('starfield-background');
+
+            const starfieldDiv = document.createElement('div');
+            starfieldDiv.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background: #000000;
+                z-index: 0;
+            `;
+
+            const canvas = document.createElement('canvas');
+            canvas.style.cssText = `
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            `;
+            starfieldDiv.appendChild(canvas);
+
+            const nebula = document.createElement('div');
+            nebula.style.cssText = `
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                opacity: 0.1;
+                background: radial-gradient(ellipse at 30% 40%, rgba(194, 124, 21, 0.05) 0%, transparent 70%);
+            `;
+            starfieldDiv.appendChild(nebula);
+
+            const vignette = document.createElement('div');
+            vignette.style.cssText = `
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background: radial-gradient(ellipse at center, transparent 0%, transparent 50%, #000000 100%);
+            `;
+            starfieldDiv.appendChild(vignette);
+
+            container.appendChild(starfieldDiv);
+
             const ctx = canvas.getContext('2d');
-            
-            // Set canvas size
-            function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+
+            canvas.width = width;
+            canvas.height = height;
+
+            const centerX = width / 2;
+            const centerY = height / 2;
+            const maxDepth = 1500;
+            const speed = 0.5;
+
+            const starColor = '#c27c15';
+
+            class Star {
+                constructor(initialZ) {
+                    this.x = (Math.random() - 0.5) * width * 2;
+                    this.y = (Math.random() - 0.5) * height * 2;
+                    this.z = initialZ ?? Math.random() * maxDepth;
+                    this.twinkleSpeed = Math.random() * 0.02 + 0.01;
+                    this.twinkleOffset = Math.random() * Math.PI * 2;
+                }
             }
-            
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            
-            // Particle system
-            const particles = [];
-            const particleCount = 80;
-            
-            class Particle {
-                constructor() {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 3 + 1;
-                    this.speedX = Math.random() * 1 - 0.5;
-                    this.speedY = Math.random() * 1 - 0.5;
-                    this.color = `rgba(245, 126, 34, ${Math.random() * 0.5 + 0.1})`;
-                }
-                
-                update() {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
-                    
-                    if (this.x > canvas.width) this.x = 0;
-                    else if (this.x < 0) this.x = canvas.width;
-                    
-                    if (this.y > canvas.height) this.y = 0;
-                    else if (this.y < 0) this.y = canvas.height;
-                }
-                
-                draw() {
-                    ctx.fillStyle = this.color;
+
+            const stars = [];
+            for (let i = 0; i < 400; i++) {
+                stars.push(new Star());
+            }
+
+            let animationId;
+            let tick = 0;
+
+            function animate() {
+                tick++;
+
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                ctx.fillRect(0, 0, width, height);
+
+                const cx = width / 2;
+                const cy = height / 2;
+
+                for (const star of stars) {
+                    star.z -= speed * 2;
+
+                    if (star.z <= 0) {
+                        star.x = (Math.random() - 0.5) * width * 2;
+                        star.y = (Math.random() - 0.5) * height * 2;
+                        star.z = maxDepth;
+                    }
+
+                    const scale = 400 / star.z;
+                    const x = cx + star.x * scale;
+                    const y = cy + star.y * scale;
+
+                    if (x < -10 || x > width + 10 || y < -10 || y > height + 10) continue;
+
+                    const size = Math.max(0.5, (1 - star.z / maxDepth) * 3);
+
+                    let opacity = (1 - star.z / maxDepth) * 0.9 + 0.1;
+
+                    if (star.twinkleSpeed > 0.015) {
+                        opacity *= 0.7 + 0.3 * Math.sin(tick * star.twinkleSpeed + star.twinkleOffset);
+                    }
+
                     ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.arc(x, y, size, 0, Math.PI * 2);
+                    ctx.fillStyle = starColor;
+                    ctx.globalAlpha = opacity;
                     ctx.fill();
-                    
-                    // Glow effect
-                    ctx.shadowBlur = 15;
-                    ctx.shadowColor = this.color;
-                }
-            }
-            
-            // Create particles
-            for (let i = 0; i < particleCount; i++) {
-                particles.push(new Particle());
-            }
-            
-            // Connect particles with lines
-            function connectParticles() {
-                for (let i = 0; i < particles.length; i++) {
-                    for (let j = i; j < particles.length; j++) {
-                        const dx = particles[i].x - particles[j].x;
-                        const dy = particles[i].y - particles[j].y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < 150) {
-                            ctx.beginPath();
-                            ctx.strokeStyle = `rgba(245, 126, 34, ${0.2 * (1 - distance/150)})`;
-                            ctx.lineWidth = 0.5;
-                            ctx.moveTo(particles[i].x, particles[i].y);
-                            ctx.lineTo(particles[j].x, particles[j].y);
-                            ctx.stroke();
-                        }
+
+                    if (star.z < maxDepth * 0.3 && speed > 0.3) {
+                        const streakLength = (1 - star.z / maxDepth) * speed * 8;
+                        const angle = Math.atan2(star.y, star.x);
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(x - Math.cos(angle) * streakLength, y - Math.sin(angle) * streakLength);
+                        ctx.strokeStyle = starColor;
+                        ctx.globalAlpha = opacity * 0.2;
+                        ctx.lineWidth = size * 0.5;
+                        ctx.stroke();
                     }
                 }
-            }
-            
-            // Animation loop
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // Update and draw particles
-                particles.forEach(particle => {
-                    particle.update();
-                    particle.draw();
-                });
-                
-                connectParticles();
-                
-                requestAnimationFrame(animate);
-            }
-            
-            animate();
-        }
 
-        // Initialize the page when loaded
-        window.addEventListener('DOMContentLoaded', init);
+                ctx.globalAlpha = 1;
+                animationId = requestAnimationFrame(animate);
+            }
+
+            function handleResize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            window.addEventListener('resize', handleResize);
+
+            ctx.fillStyle = '#000000';
+            ctx.fillRect(0, 0, width, height);
+            animate();
+
+            window.addEventListener('beforeunload', () => {
+                if (animationId) {
+                    cancelAnimationFrame(animationId);
+                }
+            });
+        })();
     </script>
 </body>
 </html>
